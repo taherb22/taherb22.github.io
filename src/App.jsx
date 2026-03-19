@@ -413,12 +413,24 @@ export default function Portfolio() {
             display: "flex", alignItems: "center", justifyContent: "center",
             color: "#2a6496", fontSize: "24px",
             overflow: "hidden",
+            position: "relative"
           }}>
-            <img  src="/profile.jpg" alt="Mohamed Taher Boudrigua "
-              style={{ width: "100%", height: "100%", objectFit: "cover", display: "none" }}
+            <img 
+              src="/profile.jpg" 
+              alt={data.name}
+              style={{ 
+                width: "100%", 
+                height: "100%", 
+                objectFit: "cover",
+                position: "absolute",
+                top: 0, left: 0,
+                zIndex: 2 
+              }}
               onError={e => { e.target.style.display = "none"; }}
             />
-            <span style={{ fontFamily: "Georgia", fontStyle: "italic" }}>M</span>
+            <span style={{ fontFamily: "Georgia", fontStyle: "italic", zIndex: 1 }}>
+              {data.name.charAt(0)}
+            </span>
           </div>
 
           <div style={{ animation: "fadeUp 0.8s ease forwards" }}>
