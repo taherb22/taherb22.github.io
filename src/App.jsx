@@ -414,7 +414,7 @@ export default function Portfolio() {
             color: "#2a6496", fontSize: "24px",
             overflow: "hidden",
           }}>
-            <img id="profile-img" src="/profile.jpg" alt=""
+            <img  src="/profile.jpg" alt="Mohamed Taher Boudrigua "
               style={{ width: "100%", height: "100%", objectFit: "cover", display: "none" }}
               onError={e => { e.target.style.display = "none"; }}
             />
